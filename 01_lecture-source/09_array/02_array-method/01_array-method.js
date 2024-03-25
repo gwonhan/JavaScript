@@ -35,7 +35,7 @@ console.log(Object.getPrototypeOf(arr)===Array.prototype);
  chickenList.shift();
  console.log(`shift 후 배열 : ${chickenList}`);
 
-//concat : 두 개 이상의 배열을 결합
+//concat : 두 개 이상의 배열을 결합.
 
 const idol1 = ['아이브', '에스파'];
 const idol2 = ['블랙핑크', '여자아이돌'];
