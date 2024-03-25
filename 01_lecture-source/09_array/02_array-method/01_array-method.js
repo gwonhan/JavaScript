@@ -41,6 +41,11 @@ const idol1 = ['아이브', '에스파'];
 const idol2 = ['블랙핑크', '여자아이돌'];
 const idol3 = ['트와이스', '방탄소년단'];
 
+//배열명.concat(배열명1, 배열명2...);
+const mix = idol1.concat(idol2);
+const mix2 = idol3.concat(idol1,idol2);
 
+console.log(`idol1 을 기준으로 결합 : ${mix}`);
+console.log(`idol3 을 기준으로 결합 : ${mix2}`);
 
 

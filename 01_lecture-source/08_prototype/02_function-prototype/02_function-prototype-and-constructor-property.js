@@ -10,3 +10,6 @@
  // 함수를 만들기만 해도 디폴트(기본값) 프로퍼티인 property 이 설정된다.
  // Student.prototype = {constructor : Student}
  console.log(Student.prototype.constructor == Student);
+
+ let student = new Student();
+ console.log(student.constructor == Student);
