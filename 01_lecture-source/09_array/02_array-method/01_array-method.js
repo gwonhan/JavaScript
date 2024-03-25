@@ -22,7 +22,7 @@ console.log(Object.getPrototypeOf(arr)===Array.prototype);
  //push, pop 생략 
 
  //uinshift : 배열의 맨 앞에 요소 추가
- //shift : 배열의 맨 앞 요소 제거 후 반환
+ //shift : 배열의 맨 앞 요소 제거 후 반환.
  const chickenList =['양념치킨', '후라이드', '파닭'];
 
  console.log(chickenList);
