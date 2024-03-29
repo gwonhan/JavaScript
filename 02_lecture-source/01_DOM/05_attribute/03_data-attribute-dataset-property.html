@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_data attribute and dataset property</title>
+</head>
+<body>
+    <h1>03. data 어트리뷰트와 dataset 프로퍼티</h1>
+
+    <pre>
+        data 어트리뷰트와 dataset 프로퍼티로 HTML 요소에 정의한 사용자 정의 어트리뷰트와
+        자바스크립트 간 데이터 교환이 가능하다.
+        data 어트리뷰트는 data- 접두사 다음에 임의의 이름을 붙여 사용한다.
+        html 과 javaScript 간 데이터 전달과 상호작용에 유용하다.
+    </pre>
+
+    <ul class="boradlist">
+        <li data-borad-id="10" data-category-id="1">신촌 맛집 추천해주세요!!</li>
+        <li data-borad-id="11" data-category-id="2">점심 먹고 뭐하지?</li>
+        <li data-borad-id="12" data-category-id="3">안녕하세요~~</li>
+    </ul>
+
+    <script>
+        const boradlist = [...document.querySelector('.boradlist').children];
+        console.log(boradlist);
+
+        boradlist.forEach(board => console.log(board.dataset));
+
+        // categoryId 가 '1' 요소 노드 취득
+        const borad = boradlist.find(board => board.dataset.categoryId === '1');
+
+        console.log(borad);
+
+        borad.dataset.categoryId = '4';
+        // 새로운 data 어트리뷰트 추가
+        borad.dataset.boradWriter = '너구리';
+    </script>
+</body>
+</html>
