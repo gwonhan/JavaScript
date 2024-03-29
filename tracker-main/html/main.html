@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: black;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            min-height: 100vh;
+            overflow: hidden; /* 스크롤바를 숨깁니다. */
+        }
+
+        /* .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        } */
+        .p1{
+            background-color: white;
+            width: 170px;
+            height: 30px;
+            margin-left: 10%;
+            border-radius: 5px;
+            display: flex; /* flex 컨테이너로 설정 */
+            align-items: center; /* 세로 중앙 정렬 */
+            position: relative;
+        }
+
+        .p2{
+            background-color: white;
+            width: 170px;
+            margin-top: 10px;
+            height: 30px;
+            margin-left: 10%;
+            border-radius: 5px;
+            display: flex; /* flex 컨테이너로 설정 */
+            align-items: center; /* 세로 중앙 정렬 */
+            position: relative;
+        } 
+        
+   
+
+        .Fiter {
+            color: white;
+            margin-top:90px;
+            
+        }
+
+        .red-box {
+            background-color: red;
+            width: 200px;
+            padding: 10px;
+            border-radius: 15px; /* 더 둥근 모양을 위해 더 큰 값으로 border-radius를 설정합니다. */
+            color: white;
+            position: absolute; /* 절대 위치로 지정합니다. */
+            bottom: 30px; /* 화면 하단에서부터 20px 위로 위치시킵니다. */
+            left: 19%;
+            transform: translateX(-50%); /* 가운데 정렬합니다. */
+            /* text-align: center; 텍스트를 가운데 정렬합니다. */
+            position: fixed;
+            margin-left: -40px;
+
+        }
+
+        .btn1 {
+            margin-left: 10%;
+            background-color: red; /* 버튼의 배경색을 빨간색으로 설정합니다. */
+            border: none;
+            color: white;
+            padding: 10px 20px; /* 버튼의 패딩을 조정합니다. */
+            border-radius: 20px; /* 버튼을 더 둥글게 만듭니다. */
+            cursor: pointer;
+        }
+        .non{
+            background-color: gray; /* 배경색 회색으로 설정 */
+            width: 400px; /* 너비 지정 */
+            padding:2px; /* 내부 여백 지정 */
+            border-radius: 20px; /* 둥근 모서리 */
+            /* position: absolute; */
+            left: 50%; /* 가운데 정렬 */
+            transform: translateX(-50%); /* 가운데 정렬 */
+            text-align: center; /* 텍스트 가운데 정렬 */
+            position: fixed;
+            margin-left: -80px;
+            margin-top: -180px;
+            display: flex;
+            
+        
+        }
+        .btn {
+            width: 400px; /* 너비 지정 */
+            padding:2px; /* 내부 여백 지정 */
+            background-color: gray; /* 배경색 회색으로 설정 */
+            border: none;
+            color: black;
+            padding: 10px 20px; /* 패딩 지정 */
+            border-radius: 20px; /* 둥근 모서리 */
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .white{
+            background-color: gray; /* 배경색 회색으로 설정 */
+            width: 400px; /* 너비 지정 */
+            padding:2px; /* 내부 여백 지정 */
+            border-radius: 20px; /* 둥근 모서리 */
+            /* position: absolute;, */
+            left: 50%; /* 가운데 정렬 */
+            transform: translateX(-50%); /* 가운데 정렬 */
+            text-align: center; /* 텍스트 가운데 정렬 */
+            position: fixed;
+            margin-left: 390px;
+            margin-top: -180px;
+            display: flex;
+        }
+
+        .section {
+            background-color: white;
+            width: 200px;
+            height: 50px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+           margin-left: 440px;
+           font-size: 20px;
+           position: relative;
+           margin-top: -20px;
+           
+           
+        }
+
+        .big-white-box {
+            background-color: white;
+            width: 900px;
+            height: 550px;
+            border-radius: 10px;
+            margin-left: 440px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <p class="Fiter">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fiter</p>
+    <div class="p1">
+        &nbsp;&nbsp;&nbsp;<input type="checkbox">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Non-followers </div>
+    
+        <div class="p2">
+            &nbsp;&nbsp;&nbsp;<input type="checkbox">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;private 
+        </div p2>
+            
+            
+        <div class="section">
+        section 1</div>
+        
+        
+
+        <div class="red-box">
+            <button class="btn1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UNFOLLOW(0)</button>
+        </div red-box>
+
+        <div class="non">
+            <button class="btn" onclick="changeColor('non')">Non-whitelisted</button>
+        </div>
+
+        <div class="white">
+            <button class="btn" onclick="changeColor('white')">Whitelisted</button>
+        </div>
+
+
+            
+            <div class="big-white-box"></div>
+
+            <script>
+                function changeColor(target) {
+                    var button = document.querySelector('.' + target + ' .btn');
+                    if (button.style.backgroundColor === 'gray') {
+                        button.style.backgroundColor = 'lightgray';
+                    } else {
+                        button.style.backgroundColor = 'gray';
+                    }
+                }
+            </script>
+                
+  
+
+
+
+     
+        
+    
+</body>
+</html>
